@@ -33,6 +33,7 @@ nostreads/
 ├─ svelte/           (Source for the optional frontend)
 └─ dist/             (Compiled frontend assets)
 ```
+
 1. **Bot**: Listens on relays for commands, fetches and parses content, then publishes it in readable format.
 2. **Server**: Provides an HTTP API for crawling or advanced indexing. The web UI interacts with this API.
 3. **Crawler**: Handles URL fetching, HTML parsing, and readability extraction.
@@ -56,25 +57,18 @@ nostreads/
 
 ## Getting Started
 
-1. **Clone & Setup**
+1. Clone & setup
    ```bash
-   git clone https://github.com/<yourusername>/nostreads.git
+   git clone https://github.com/circumspace/nostreads.git
    cd nostreads
    go mod tidy
     ```
-	2.	Run the Bot
-    ```bash
-    go run ./cmd/bot
-    ```
+2. Run the Bot
+  ```bash
+  go run ./cmd/bot
+  ```
 
-	3.	Run the Server
-    ```bash
-    go run ./cmd/server
-    ```
-
-	4.	(Optional) Build Frontend
-    ```bash
-    cd web/svelte
-    npm install
-    npm run build
-    ```
+3. Run the Server
+  ```bash
+  go run ./cmd/server
+  ```
